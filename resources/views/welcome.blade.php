@@ -4,8 +4,9 @@
 
 @section('content')
 
+<h1>i miei fumetti</h1>
 
-    @foreach ($comics as $comic)
+    {{-- @foreach ($comics as $comic)
         <div class="card" style="width: 18rem;">
             <img src="{{ $comic->thumb }}" class="card-img-top">
             <div class="card-body">
@@ -17,7 +18,7 @@
                 <p class="card-text">{{$comic->type}}</p>
             </div>
         </div>
-    @endforeach
+    @endforeach --}}
 
 
 
