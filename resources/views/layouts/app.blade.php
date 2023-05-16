@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    {{-- @include('partials.header') --}}
+    @include('partials.header')
 
     <main>
         <div class="container">
