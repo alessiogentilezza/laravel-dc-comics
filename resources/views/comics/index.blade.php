@@ -17,7 +17,7 @@
                     <p class="card-text">{{ $comic->sale_date }}</p>
                     <p class="card-text">{{ $comic->type }}</p>
 
-                    <a class="btn btn-success" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Vedi</a>
+                    <a class="btn btn-primary" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Vedi</a>
 
                 </div>
             </div>
