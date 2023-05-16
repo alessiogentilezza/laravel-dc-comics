@@ -4,7 +4,8 @@
 
 @section('content')
 
-    <div class="container d-flex flex-wrap">
+    <a href="{{ route('comics.create') }}" class="btn btn-warning m-3">Aggiungi nuovo fumetto</a>
+    <div class=" d-flex flex-wrap">
         @foreach ($comics as $comic)
             <div class="card m-3" style="width: 18rem">
                 <img src="{{ $comic->thumb }}" class="card-img-top">
