@@ -1,12 +1,11 @@
 @extends('layouts.app')
 
 @section('page-title')
-    aggiungi un fumetto
+    Aggiungi un fumetto:
 @endsection
 
 @section('content')
-
-    <form method="POST" action="{{route('comics.store')}}">
+    <form method="POST" action="{{ route('comics.store') }}">
 
         @csrf
 
@@ -37,7 +36,7 @@
 
         <div class="mb-3">
             <label for="sale_date" class="form-label">Anno di uscita:</label>
-            <input type="number" class="form-control" id="sale_date" name="sale_date">
+            <input type="text" class="form-control" id="sale_date" name="sale_date">
         </div>
 
         <div class="mb-3">
@@ -47,5 +46,4 @@
 
         <button type="submit" class="btn btn-warning">Salva</button>
     </form>
-
 @endsection
