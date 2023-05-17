@@ -43,8 +43,12 @@
             <label for="type" class="form-label">Tipo:</label>
             <input type="text" class="form-control" id="type" name="type">
         </div>
+<div class="d-flex">
 
-        <button type="submit" class="btn btn-success">Salva</button>
-        <button type="reset" class="btn btn-danger">Reset</button>
+    <button type="submit" class="btn btn-success me-3">Salva</button>
+    <button type="reset" class="btn btn-danger me-3">Reset</button>
+    <a class="btn btn-primary" href="{{ route('comics.index') }}">Torna alla lista</a>
+</div>
+
     </form>
 @endsection

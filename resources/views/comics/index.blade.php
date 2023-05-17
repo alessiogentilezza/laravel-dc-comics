@@ -22,7 +22,30 @@
                         <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Elimina</button>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Elimina
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            Sei sicuro di voler eliminare questo fumetto?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary"
+                                                data-bs-dismiss="modal">No</button>
+                                            <button type="submit" class="btn btn-danger">SI</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{-- <button type="submit" class="btn btn-danger">Elimina</button> --}}
                         </form>
                     </div>
                 </div>
