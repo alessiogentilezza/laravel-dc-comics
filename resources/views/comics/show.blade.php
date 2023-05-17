@@ -1,6 +1,5 @@
 @extends('layouts.app')
-@section('page-title')
-
+@section('page-title',)
 @section('content')
 
     <div class="card m-3" style="width: 18rem">
@@ -12,9 +11,7 @@
             <p class="card-text">{{ $comic->series }}</p>
             <p class="card-text">{{ $comic->sale_date }}</p>
             <p class="card-text">{{ $comic->type }}</p>
-
-            <a class="btn btn-danger" href="{{ route('comics.index') }}">Torna alla lista</a>
-
+            <a class="btn btn-primary" href="{{ route('comics.index') }}">Torna alla lista</a>
         </div>
     </div>
 

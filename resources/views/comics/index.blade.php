@@ -16,9 +16,15 @@
                     <p class="card-text">{{ $comic->series }}</p>
                     <p class="card-text">{{ $comic->sale_date }}</p>
                     <p class="card-text">{{ $comic->type }}</p>
-
-                    <a class="btn btn-primary" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Vedi</a>
-
+                    <div class="d-flex justify-content-around">
+                        <a class="btn btn-success" href="{{ route('comics.show', ['comic' => $comic->id]) }}">Vedi</a>
+                        <a class="btn btn-light" href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica</a>
+                        <form action="{{ route('comics.destroy', ['comic' => $comic->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Elimina</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         @endforeach
