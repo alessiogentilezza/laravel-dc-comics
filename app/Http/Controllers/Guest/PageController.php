@@ -8,10 +8,15 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function index() {
+    public function index()
+    {
 
-                $comics = Comic::all();
+        // $comics = Comic::all();
+        // return view('welcome',compact('comics'));
 
-        return view('welcome',compact('comics'));
+        return view('welcome');
+
+        // SE VOLESSI MANDARE LA HOME DIRETTAMENTE IN UN'ALTRA PAGINA
+        // return redirect()->route('comics.index');
     }
 }
