@@ -134,6 +134,8 @@ class ComicController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route('comics.index');
+        // return redirect()->route('home');
+        return to_route('comics.index')->with('deleteStatus', "$comic->title è stato canellato dalla tua lista!");
+
     }
 }

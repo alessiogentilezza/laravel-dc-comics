@@ -28,10 +28,16 @@
             @endif
 
             @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
-            </div>
-        @endif
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+            @endif
+
+            @if (session('deleteStatus'))
+                <div class="alert alert-danger">
+                    {{ session('deleteStatus') }}
+                </div>
+            @endif
 
             @yield('content')
         </div>
